@@ -56,7 +56,7 @@ default_stylesheet = [
 # 布局
 app.layout = html.Div(
     [
-        fac.AntdTitle("dash-cytoscape 示例", level=4),
+        fac.AntdTitle("Graph 可视化", level=4),
         fac.AntdSpace(
             [
                 fac.AntdSelect(
@@ -160,7 +160,7 @@ def update_stylesheet(line_color, bg_color):
 def update_elements(add_nClicks, rev_nClicks, elements):
     current_nodes, deleted_nodes = get_current_and_deleted_nodes(elements)
     # If the add button was clicked most recently and there are nodes to add
-    if add_nClicks and len(deleted_nodes):
+    if add_nClicks and len(deleted_nodes) > 0:
         # We pop one node from deleted nodes and append it to nodes list.
         current_nodes.append(deleted_nodes.pop())
         # Get valid edges -- both source and target nodes are in the current graph
@@ -168,7 +168,7 @@ def update_elements(add_nClicks, rev_nClicks, elements):
         return cy_edges + current_nodes
 
     # If the remove button was clicked most recently and there are nodes to remove
-    elif rev_nClicks and len(current_nodes):
+    elif rev_nClicks and len(current_nodes) > 0:
         current_nodes.pop()
         cy_edges = get_current_valid_edges(current_nodes, edges)
         return cy_edges + current_nodes
