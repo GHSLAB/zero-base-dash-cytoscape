@@ -43,7 +43,7 @@ https://dash.plotly.com/cytoscape
 - 布局与回调结合
 
 ### 图像导出
-演示如何将Cytoscape图表导出为图片格式（jpg/png/svg）
+演示如何将Cytoscape图表导出为图片格式(jpg/png/svg)
 
 ### 响应式图表
 展示如何构建响应式Cytoscape图表

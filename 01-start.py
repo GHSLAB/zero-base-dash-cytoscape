@@ -29,9 +29,9 @@ app.layout = html.Div(
         # border="2px solid #ccc",
         borderRadius="10px",
         # padding="10px",
-        boxShadow="inset 0 0 10px #00000080"  # 新增内阴影效果
+        boxShadow="inset 0 0 10px #00000080",  # 新增内阴影效果
     ),
 )
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port="18010")
